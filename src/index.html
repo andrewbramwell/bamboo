@@ -1,0 +1,344 @@
+---
+title: 'Massage'
+description: 'Discover expert massage therapy at Amy Thai Massage in Wakefield. Unwind with our range of treatments, including Thai Hot Oil and Deep Tissue massages. Book your session today.'
+preloadImg: '/assets/images/hero/hero.webp'
+permalink: '/'
+eleventyNavigation:
+  key: Home
+  order: 100
+---
+
+{% extends "layouts/base.html" %}
+
+{% block head %}
+    <link rel="stylesheet" href="/assets/css/local.css" />
+    <link rel="stylesheet" href="/assets/css/critical.css" />
+
+    <!-- Script for Netlify Identity -->
+    <script defer src="https://identity.netlify.com/v1/netlify-identity-widget.js"></script>
+    <script defer>
+        if (window.netlifyIdentity) {
+            window
+                .netlifyIdentity
+                .on('init', (user) => {
+                    if (!user) {
+                        window
+                            .netlifyIdentity
+                            .on('login', () => {
+                                document.location.href = '/admin/';
+                            });
+                    }
+                });
+        }
+    </script>
+{% endblock %}
+
+{% block body %}
+
+
+<!-- ============================================ -->
+<!--                    Hero                      -->
+<!-- ============================================ -->
+
+<section id="hero-1469">
+    <div class="cs-container">
+        <div class="cs-content">
+            <h1 class="cs-title">Expert Massage Therapy in Wakefield</h1>
+            <p class="cs-text">
+                Experience the transformative power of professional massage therapy in the heart of Wakefield. At Amy Thai Massage, we combine time-honoured techniques with modern therapeutic approaches to enhance your overall well-being.
+            </p>
+            <a class="cs-button-solid" href="{{client.onlineBooking}}" target="_blank" rel="noopener">Schedule Now</a>
+        </div>
+    </div>
+    <!-- Background Image, background image added in the css at 1600px for parallax effect -->
+    <picture class="cs-background">
+        <source media="(max-width: 600px)" srcset="/assets/images/hero/hero-m.webp">
+        <source media="(min-width: 601px)" srcset="/assets/images/hero/hero.webp">
+        <img decoding="async" src="/assets/images/hero/hero.jpg" alt="man getting a massage" width="2250" height="1500" aria-hidden="true">
+    </picture>
+    <!--SVG Curve-->
+    <svg class="cs-curve" width="1920" height="136" viewBox="0 0 1920 136" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <path fill-rule="evenodd" clip-rule="evenodd" d="M1920 136V0C1803.21 45.3334 1445.52 136 951 136C456.485 136 111.116 45.3334 0 0V136H951H1920Z" fill="#fff"/>
+    </svg>
+</section>
+
+<!-- ============================================ -->
+<!--                  Services                    -->
+<!-- ============================================ -->
+
+<section id="services-1849">
+    <div class="cs-container">
+        <div class="cs-content">
+            <span class="cs-topper">Popular</span>
+            <h2 class="cs-title">Explore Our Services</h2>
+            <p class="cs-text">
+                At Amy Thai Massage, we offer a select range of treatments to cater to your needs. Whether you're seeking deep relaxation or therapeutic healing, we are here to help. Each service is tailored to your specific requirements, ensuring a personalised and effective experience. 
+            </p>
+        </div>
+        <ul class="cs-card-group">
+            <li class="cs-item">
+                <picture class="cs-picture">
+                    <!--Mobile Image-->
+                    <source media="(max-width: 600px)" srcset="/assets/images/services/oil.webp">
+                    <!--Tablet and above Image-->
+                    <source media="(min-width: 601px)" srcset="/assets/images/services/oil.webp">
+                    <img loading="lazy" decoding="async" src="/assets/images/services/oil.jpg" alt="oil massage" width="500" height="750">
+                </picture>
+                <div class="cs-text-box">
+                    <h3 class="cs-h3">Thai Hot Oil Massage</h3>
+                    <span class="cs-ages">30 Mins £30<br>45 Mins £40<br>60 Mins £50<br>90 Mins £70<br>120 Mins £100</span>
+                    <p class="cs-item-text">
+                        Thai Hot Oil Massage blends traditional techniques with warm, aromatic oils. Gentle to moderate pressure and flowing strokes along energy lines promote deep relaxation, improve circulation, and relieve muscle tension.
+                    </p>
+                </div>
+            </li>
+            <li class="cs-item">
+                <picture class="cs-picture">
+                    <!--Mobile Image-->
+                    <source media="(max-width: 600px)" srcset="/assets/images/services/aroma.webp">
+                    <!--Tablet and above Image-->
+                    <source media="(min-width: 601px)" srcset="/assets/images/services/aroma.webp">
+                    <img loading="lazy" decoding="async" src="/assets/images/services/aroma.jpg" alt="aromatherapy" width="500" height="750">
+                </picture>
+                <div class="cs-text-box">
+                    <h3 class="cs-h3">Aromatherapy Massage</h3>
+                    <span class="cs-ages">30 Mins £30<br>45 Mins £40<br>60 Mins £50<br>90 Mins £70<br>120 Mins £100</span>
+                    <p class="cs-item-text">
+                        Aromatherapy Massage uses essential oils to stimulate the senses and promote relaxation. Gentle, gliding movements soothe muscle tension, balance emotions, and boost the immune system, leaving you refreshed and revitalised.
+                    </p>
+                </div>
+            </li>
+            <li class="cs-item">
+                <picture class="cs-picture">
+                    <!--Mobile Image-->
+                    <source media="(max-width: 600px)" srcset="/assets/images/services/deep-tissue.webp">
+                    <!--Tablet and above Image-->
+                    <source media="(min-width: 601px)" srcset="/assets/images/services/deep-tissue.webp">
+                    <img loading="lazy" decoding="async" src="/assets/images/services/deep-tissue.jpg" alt="deep tissue maasage" width="500" height="750">
+                </picture>
+                <div class="cs-text-box">
+                    <h3 class="cs-h3">Deep Tissue Thai Massage</h3>
+                    <span class="cs-ages">30 Mins £35<br>45 Mins £45<br>60 Mins £55<br>90 Mins £75<br>120 Mins £105</span>
+                    <p class="cs-item-text">
+                        Deep Tissue Thai Massage combines firm pressure with traditional Thai stretching. It targets deeper muscle layers and connective tissue to relieve chronic tension, improve posture, and enhance range of motion.
+                    </p>
+                </div>
+            </li>
+        </ul>
+        <a href="/massages/" class="cs-button-solid">All Massages</a>
+    </div>
+</section>
+
+<!-- ============================================ -->
+<!--             Side By Side Reverse             -->
+<!-- ============================================ -->
+
+<section id="sbs-r-870">
+    <div class="cs-container">
+        <picture class="cs-picture">
+            <!--Mobile Image-->
+            <source media="(max-width: 600px)" srcset="/assets/images/side/back-m.webp">
+            <!--Tablet and above Image-->
+            <source media="(min-width: 601px)" srcset="/assets/images/side/back.webp">
+            <img loading="lazy" decoding="async" src="/assets/images/side/back.jpg" alt="therapy" width="630" height="775">
+        </picture>
+        <div class="cs-content">
+            <span class="cs-topper">Featured Treatment</span>
+            <h2 class="cs-title">Thai Hot Oil Massage</h2>
+            <p class="cs-text">
+                Experience the blissful fusion of traditional Thai techniques and aromatic oils with our Thai Hot Oil Massage at Amy Thai Massage in Wakefield. This luxurious treatment combines the therapeutic benefits of Thai massage with the soothing properties of warm, fragrant oils. Our expert therapists use a blend of gentle stretches and flowing strokes to ease tension and promote deep relaxation throughout your body.
+            </p>
+            <p class="cs-text">
+                Performed on a comfortable massage table, this treatment allows the warm oil to penetrate deeply into your muscles, enhancing the massage's effectiveness. The heated oil helps to loosen tight muscles and improve circulation, while skilled hand movements work to release tension and promote flexibility. This harmonious blend of techniques results in a profoundly relaxing experience that leaves you feeling both invigorated and serene.
+            </p>
+            <a href="/thai-oil/" class="cs-button-solid">Thai Hot Oil Massage</a>
+        </div>
+    </div>
+</section>
+
+
+<!-- ============================================ -->
+<!--                   Process                    -->
+<!-- ============================================ -->
+
+<section id="process-687">
+    <div class="cs-container">
+        <div class="cs-content">
+            <span class="cs-topper">Why Us</span>
+            <h2 class="cs-title">The Amy Thai Massage Difference</h2>
+            <p class="cs-text">
+                At Amy Thai Massage, we are devoted to delivering exceptional service with authentic Thai authenticity and expertise. Our dedication to your well-being and relaxation sets us apart.
+            </p>
+        </div>
+        <ul class="cs-card-group">
+            <li class="cs-item">
+                <picture class="cs-picture">
+                    <img class="cs-icon" loading="lazy" decoding="async" src="/assets/svgs/temple.svg" alt="thai temple icon" width="42" height="42">
+                </picture>
+                <h3 class="cs-h3">Authentic Thai Techniques </h3>
+                <p class="cs-item-text">Our therapist is trained in traditional Thai massage methods, offering you a genuine experience that balances ancient wisdom with modern wellness.</p>
+            </li>
+            <li class="cs-item">
+                <picture class="cs-picture">
+                    <img class="cs-icon" loading="lazy" decoding="async" src="/assets/svgs/woman.svg" alt="personalised icon" width="42" height="42">
+                </picture>
+                <h3 class="cs-h3">Personalised Care</h3>
+                <p class="cs-item-text">We tailor each session to your specific needs and preferences, ensuring a bespoke treatment that addresses your unique concerns and goals.</p>
+            </li>
+            <li class="cs-item">
+                <picture class="cs-picture">
+                    <img class="cs-icon" loading="lazy" decoding="async" src="/assets/svgs/graduation.svg" alt="graduation icon" width="32" height="42">
+                </picture>
+                <h3 class="cs-h3">Professionally Accredited</h3>
+                <p class="cs-item-text">Our therapist holds UK-recognised massage qualifications, ensuring you receive treatments that meet the highest standards of professionalism.</p>
+            </li>
+        </ul>
+    </div>
+    <!--SVG Waves-->
+    <img class="cs-background" loading="lazy" decoding="async" src="/assets/svgs/ripple.svg" aria-hidden="true" alt="svg waves" width="1280" height="568">
+</section>
+                                
+
+<!-- ============================================ -->
+<!--                 Side By Side                 -->
+<!-- ============================================ -->
+
+<section id="sbs-867">
+    <div class="cs-container">
+        <picture class="cs-picture">
+            <!--Mobile Image-->
+            <source media="(max-width: 600px)" srcset="/assets/images/side/thai2-m.webp">
+            <!--Tablet and above Image-->
+            <source media="(min-width: 601px)" srcset="/assets/images/side/thai2.webp">
+            <img loading="lazy" decoding="async" src="/assets/images/side/thai2.jpg" alt="therapy" width="630" height="775">
+        </picture>
+        <div class="cs-content">
+            <span class="cs-topper">Featured Service</span>
+            <h2 class="cs-title">Deep Tissue Thai Massage</h2>
+            <p class="cs-text">
+                Discover the powerful healing effects of Deep Tissue Massage at Amy Thai Massage in Wakefield. This intensive treatment targets the deeper layers of muscle and connective tissue to address chronic tension and pain. Our skilled therapists use firm pressure and slow, deliberate strokes to reach deep-seated knots and adhesions, promoting healing and restoring mobility to troubled areas.
+            </p>
+            <p class="cs-text">
+                Performed on a massage table, this treatment focuses on specific problem areas of your body. While it can be more intense than other forms of massage, our therapists work within your comfort levels, adjusting pressure to suit your needs. Deep Tissue Massage is particularly effective for chronic pain, limited mobility, recovery from injuries, and postural problems. Experience relief from persistent discomfort and enjoy improved flexibility and range of motion.
+            </p>
+            <a href="/deep-tissue/" class="cs-button-solid">Deep Tissue Thai Massage</a>
+        </div>
+    </div>
+</section>
+                                
+
+<!-- ============================================ -->
+<!--                    FAQ                       -->
+<!-- ============================================ -->
+
+<section id="faq-1505">
+    <div class="cs-container">
+        <div class="cs-content">
+            <span class="cs-topper">FAQ's</span>
+            <h2 class="cs-title">Frequently Asked Questions</h2>
+            <div class="cs-image-group">
+                <picture class="cs-picture">
+                    <!--Mobile Image-->
+                    <source media="(max-width: 600px)" srcset="/assets/images/faq-m.webp">
+                    <!--Tablet and above Image-->
+                    <source media="(min-width: 601px)" srcset="/assets/images/faq.webp">
+                    <img loading="lazy" decoding="async" src="/assets/images/faq.jpg" alt="Massage oils" width="586" height="376">
+                </picture>
+            </div>
+        </div>
+        <div class="cs-flex-group">
+            <ul class="cs-faq-group">
+                <!-- Active class added as default -->
+                <li class="cs-faq-item active">
+                    <button class="cs-button">
+                        <span class="cs-button-text">
+                            What are your operating hours?
+                        </span>
+                        <span class="cs-indicator" aria-hidden="true"></span>
+                    </button>
+                    <p class="cs-item-p">
+                        We are open 7 days a week from 9AM to 8PM. Please check our Google Business Profile for bank holiday opening hours.
+                    </p>
+                </li>
+                <li class="cs-faq-item">
+                    <button class="cs-button">
+                        <span class="cs-button-text">
+                            Do I need to make an appointment, or do you accept walk-ins?
+                        </span>
+                        <span class="cs-indicator" aria-hidden="true"></span>
+                    </button>
+                    <p class="cs-item-p">
+                        While we do accept walk-ins subject to availability, we highly recommend making an appointment via our online booking system to ensure your preferred time slot and treatment.
+                    </p>
+                </li>
+                <li class="cs-faq-item">
+                    <button class="cs-button">
+                        <span class="cs-button-text">
+                            Do you offer any discounts or promotions?
+                        </span>
+                        <span class="cs-indicator" aria-hidden="true"></span>
+                    </button>
+                    <p class="cs-item-p">
+                        We occasionally offer seasonal promotions and discounts. Please check our website to stay informed about current offers.
+                    </p>
+                </li>
+                <li class="cs-faq-item">
+                    <button class="cs-button">
+                        <span class="cs-button-text">
+                            What if I have specific health concerns?
+                        </span>
+                        <span class="cs-indicator" aria-hidden="true"></span>
+                    </button>
+                    <p class="cs-item-p">
+                        Please inform your therapist of any health concerns, injuries, or medical conditions before your massage. The therapist can adapt techniques to ensure a safe and beneficial experience.
+                </li>
+            </ul>
+        </div>
+    </div>
+</section>
+
+<!-- ============================================ -->
+<!--                   Reviews                    -->
+<!-- ============================================ -->
+
+<!--<section id="reviews-354">
+    <div class="cs-container">
+        <div class="cs-content">
+            <span class="cs-topper">Testimonials</span>
+            <h2 class="cs-title">What Our Clients Are Saying</h2>
+            <p class="cs-text">
+                Discover the unique Amy Thai Massage difference by hearing from our happy clients. Our dedication to individualised attention has brought relaxation, comfort, and renewal to numerous clients in Sittingbourne.
+            </p>
+        </div>
+        <ul class="cs-card-group">
+            <li class="cs-item">
+                <img class="cs-quote" aria-hidden="true" src="/assets/svgs/gold-quote.svg" decoding="async" alt="quote icon" width="40" height="33">
+                <p class="cs-review">
+                    My partner and I came today for a couples massage, you ladies are wonderful. Thank you so much for an amazing hour full body massage, cracking and getting deep into our muscles. We are both feeling great after being so tense. Definitely would recommend and will defo be coming back.
+                </p>
+                <span class="cs-name">GS</span>
+            </li>
+            <li class="cs-item">
+                <img class="cs-quote" aria-hidden="true" src="/assets/svgs/gold-quote.svg" decoding="async" alt="quote icon" width="40" height="33">
+                <p class="cs-review">
+                    A wonderful, delightful, deep tissue massage with my therapist the lovely Nat. Her skilful techniques including kneading, rolling and deep pressure applied to precise points on my body felt extremely satisfying. The whole hour with Nat was exhilarating, I left feeling so refreshed. 
+                </p>
+                <span class="cs-name">AN</span>
+            </li>
+        </ul>
+    </div>
+</section>-->
+                                             
+
+
+<script>const faqItems = Array.from(document.querySelectorAll('.cs-faq-item'));
+    for (const item of faqItems) {
+        const onClick = () => {
+        item.classList.toggle('active')
+    }
+    item.addEventListener('click', onClick)
+    }
+</script>                 
+
+    {% include 'components/cta.html' %}
+{% endblock %}

@@ -1,0 +1,129 @@
+---
+title: 'About'
+description: "Meet the skilled therapist behind Amy Thai Massage in Wakefield. Learn about our commitment to authentic techniques and personalised care for your well-being."
+preloadImg: '/assets/images/banners/banner3.webp'
+permalink: 'about/'
+eleventyNavigation:
+    key: About Us
+    order: 200
+---
+
+{% extends "layouts/base.html" %}
+
+{% block head %}
+    <link rel="stylesheet" href="/assets/css/about.css">
+{% endblock %}
+
+{% block body %}
+
+<!-- ============================================ -->
+<!--                   Banner                     -->
+<!-- ============================================ -->
+
+<div id="banner-1519">
+    <div class="cs-container">
+        <span class="cs-int-title">About Us</span>
+        <div class="cs-breadcrumbs">
+            <a href="/" class="cs-link">Home</a>
+            <a href="/about/" class="cs-link cs-active">About</a>
+        </div>
+    </div>
+    <!--Background Image-->
+    <picture class="cs-background">
+        <!--Mobile Image-->
+        <source media="(max-width: 600px)" srcset="/assets/images/banners/banner3-m.webp">
+        <!--Tablet and above Image-->
+        <source media="(min-width: 601px)" srcset="/assets/images/banners/banner3.webp">
+        <img decoding="async" src="/assets/images/banners/banner3.webp" alt="massage oils" width="1280" height="568" aria-hidden="true">
+    </picture>
+    <svg class="cs-mask" xmlns="http://www.w3.org/2000/svg" width="1920" height="136" viewBox="0 0 1920 136" fill="none">
+        <path fill-rule="evenodd" clip-rule="evenodd" d="M1920 136V0C1803.21 45.3334 1445.52 136 951 136C456.485 136 111.116 45.3334 0 0V136H951H1920Z" fill="var(--maskBG)"/>
+    </svg>
+</div>
+                                
+
+<!-- ============================================ -->
+<!--                 Side By Side                 -->
+<!-- ============================================ -->
+
+<section id="sbs-867">
+    <div class="cs-container">
+        <picture class="cs-picture">
+            <!--Mobile Image-->
+            <source media="(max-width: 600px)" srcset="/assets/images/about-m.webp">
+            <!--Tablet and above Image-->
+            <source media="(min-width: 601px)" srcset="/assets/images/about.webp">
+            <img loading="lazy" decoding="async" src="/assets/images/about.jpg" alt="Amy owner" width="630" height="775">
+        </picture>
+        <div class="cs-content">
+            <h2 class="cs-title">About Amy Thai Massage</h2>
+            <p class="cs-text">
+                Amy, the founder and principal therapist of Amy Thai Massage, hails from the beautiful coastal province of Rayong in Thailand. From a young age, Amy was captivated by the healing power of touch and the profound impact it can have on both body and mind. It has always been her dream to become a massage therapist, a dream she has pursued with unwavering dedication.
+            </p>
+            <p class="cs-text">
+                Amy's journey to establishing her massage practice in Wakefield was driven by a deep-seated belief in the transformative power of massage. She recognised the potential to help people, especially those struggling with long-term injuries, find relief and renewed well-being through skilled therapeutic touch.
+            </p>
+            <p class="cs-text">
+                To turn her passion into expertise, Amy has invested heavily in her education. She has completed several massage therapy diplomas, equipping her with a diverse range of techniques and approaches. But Amy's commitment to learning doesn't stop there. She is currently pursuing additional qualifications to expand her skill set and offer an even wider range of services to her clients.
+            </p>
+            <p class="cs-text">
+                At Amy Thai Massage, we believe in the body's innate ability to heal itself when given the right support. Our treatments are designed to facilitate this natural healing process, combining traditional Thai massage techniques with modern therapeutic approaches. Whether you're seeking relief from chronic pain, looking to improve flexibility, or simply in need of relaxation, we tailor our services to meet your unique needs.
+            </p>
+            <p class="cs-text">
+                As Amy continues to grow her skills and her business, she remains committed to her original vision: helping people heal and discover the best version of themselves through the power of massage. We invite you to be a part of this journey and experience the difference that skilled, caring massage therapy can make in your life.
+            </p>
+            <p class="cs-text">
+                Visit Amy Thai Massage in Wakefield and take the first step towards a more balanced, pain-free you.
+            </p>
+        </div>
+    </div>
+</section>
+<!-- ============================================ -->
+<!--                   Gallery                    -->
+<!-- ============================================ -->
+
+<section id="gallery-45">
+    <div class="cs-container">
+        <ul class="cs-image-group">
+            <!-- Image 1 -->
+            <li class="cs-item">
+                <picture class="cs-picture">
+                    <source media="(max-width: 600px)" srcset="/assets/images/gallery/1.webp">
+                    <source media="(min-width: 601px)" srcset="/assets/images/gallery/1.webp">
+                    <img loading="lazy" decoding="async" src="/assets/images/gallery/1.jpg" alt="foot bath" width="346" height="346">
+                </picture>
+            </li>
+            <!-- Image 2 -->
+            <li class="cs-item">
+                <picture class="cs-picture">
+                    <source media="(max-width: 600px)" srcset="/assets/images/gallery/2.webp">
+                    <source media="(min-width: 601px)" srcset="/assets/images/gallery/2.webp">
+                    <img loading="lazy" decoding="async" src="/assets/images/gallery/2.jpg" alt="massage room" width="346" height="346">
+                </picture>
+            </li>
+            <!-- Image 3 -->
+            <li class="cs-item">
+                <picture class="cs-picture">
+                    <source media="(max-width: 600px)" srcset="/assets/images/gallery/3.webp">
+                    <source media="(min-width: 601px)" srcset="/assets/images/gallery/3.webp">
+                    <img loading="lazy" decoding="async" src="/assets/images/gallery/3.jpg" alt="massage bed" width="346" height="346">
+                </picture>
+            </li>
+            <!-- Image 4 -->
+            <li class="cs-item">
+                <picture class="cs-picture">
+                    <source media="(max-width: 600px)" srcset="/assets/images/gallery/4.webp">
+                    <source media="(min-width: 601px)" srcset="/assets/images/gallery/4.webp">
+                    <img loading="lazy" decoding="async" src="/assets/images/gallery/4.jpg" alt="massage room dark" width="346" height="346">
+                </picture>
+            </li>
+        </ul>
+    </div>
+</section>
+                                
+                                
+                                
+
+    {% include 'components/cta.html' %}
+
+{% endblock %}

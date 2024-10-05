@@ -1,0 +1,113 @@
+---
+title: 'Massages'
+description: "Explore our diverse range of massage treatments at Amy Thai Massage in Wakefield. From relaxing Thai Hot Oil to invigorating Deep Tissue massages. Find your perfect therapy."
+preloadImg: '/assets/images/banners/banner3.webp'
+permalink: 'massages/'
+eleventyNavigation:
+    key: Massages
+    order: 300
+---
+
+{% extends "layouts/base.html" %}
+
+{% block head %}
+    <link rel="stylesheet" href="/assets/css/waxing.css">
+{% endblock %}
+
+{% block body %}
+<!-- ============================================ -->
+<!--                   Banner                     -->
+<!-- ============================================ -->
+
+<div id="banner-1519">
+    <div class="cs-container">
+        <span class="cs-int-title">Massages</span>
+        <div class="cs-breadcrumbs">
+            <a href="/" class="cs-link">Home</a>
+            <a href="/massages/" class="cs-link cs-active">Massages</a>
+        </div>
+    </div>
+    <!--Background Image-->
+    <picture class="cs-background">
+        <!--Mobile Image-->
+        <source media="(max-width: 600px)" srcset="/assets/images/banners/banner3-m.webp">
+        <!--Tablet and above Image-->
+        <source media="(min-width: 601px)" srcset="/assets/images/banners/banner3.jpg">
+        <img decoding="async" src="/assets/images/banners/banner3.webp" alt="massage oils" width="1280" height="568" aria-hidden="true">
+    </picture>
+    <svg class="cs-mask" xmlns="http://www.w3.org/2000/svg" width="1920" height="136" viewBox="0 0 1920 136" fill="none">
+        <path fill-rule="evenodd" clip-rule="evenodd" d="M1920 136V0C1803.21 45.3334 1445.52 136 951 136C456.485 136 111.116 45.3334 0 0V136H951H1920Z" fill="var(--maskBG)"/>
+    </svg>
+</div>
+
+<!-- ============================================ -->
+<!--                  Services                    -->
+<!-- ============================================ -->
+
+<section id="services-1849">
+    <div class="cs-container">
+        <div class="cs-content">
+            <span class="cs-topper">Popular</span>
+            <h2 class="cs-title">Explore Our Services</h2>
+            <p class="cs-text">
+                At Amy Thai Massage, we offer a select range of treatments to cater to your needs. Whether you're seeking deep relaxation or therapeutic healing, we are here to help. Each service is tailored to your specific requirements, ensuring a personalised and effective experience. 
+            </p>
+        </div>
+        <ul class="cs-card-group">
+            <li class="cs-item">
+                <picture class="cs-picture">
+                    <!--Mobile Image-->
+                    <source media="(max-width: 600px)" srcset="/assets/images/services/oil.webp">
+                    <!--Tablet and above Image-->
+                    <source media="(min-width: 601px)" srcset="/assets/images/services/oil.webp">
+                    <img loading="lazy" decoding="async" src="/assets/images/services/oil.jpg" alt="oil massage" width="500" height="750">
+                </picture>
+                <div class="cs-text-box">
+                    <h3 class="cs-h3">Thai Hot Oil Massage</h3>
+                    <span class="cs-ages">30 Mins £30<br>45 Mins £40<br>60 Mins £50<br>90 Mins £70<br>120 Mins £100</span>
+                    <p class="cs-item-text">
+                        Thai Hot Oil Massage blends traditional techniques with warm, aromatic oils. Gentle to moderate pressure and flowing strokes along energy lines promote deep relaxation, improve circulation, and relieve muscle tension.
+                    </p>
+                </div>
+            </li>
+            <li class="cs-item">
+                <picture class="cs-picture">
+                    <!--Mobile Image-->
+                    <source media="(max-width: 600px)" srcset="/assets/images/services/aroma.webp">
+                    <!--Tablet and above Image-->
+                    <source media="(min-width: 601px)" srcset="/assets/images/services/aroma.webp">
+                    <img loading="lazy" decoding="async" src="/assets/images/services/aroma.jpg" alt="aromatherapy" width="500" height="750">
+                </picture>
+                <div class="cs-text-box">
+                    <h3 class="cs-h3">Aromatherapy Massage</h3>
+                    <span class="cs-ages">30 Mins £30<br>45 Mins £40<br>60 Mins £50<br>90 Mins £70<br>120 Mins £100</span>
+                    <p class="cs-item-text">
+                        Aromatherapy Massage uses essential oils to stimulate the senses and promote relaxation. Gentle, gliding movements soothe muscle tension, balance emotions, and boost the immune system, leaving you refreshed and revitalised.
+                    </p>
+                </div>
+            </li>
+            <li class="cs-item">
+                <picture class="cs-picture">
+                    <!--Mobile Image-->
+                    <source media="(max-width: 600px)" srcset="/assets/images/services/deep-tissue.webp">
+                    <!--Tablet and above Image-->
+                    <source media="(min-width: 601px)" srcset="/assets/images/services/deep-tissue.webp">
+                    <img loading="lazy" decoding="async" src="/assets/images/services/deep-tissue.jpg" alt="deep tissue maasage" width="500" height="750">
+                </picture>
+                <div class="cs-text-box">
+                    <h3 class="cs-h3">Deep Tissue Massage</h3>
+                    <span class="cs-ages">30 Mins £35<br>45 Mins £45<br>60 Mins £55<br>90 Mins £75<br>120 Mins £105</span>
+                    <p class="cs-item-text">
+                        Deep Tissue Thai Massage combines firm pressure with traditional Thai stretching. It targets deeper muscle layers and connective tissue to relieve chronic tension, improve posture, and enhance range of motion.
+                    </p>
+                </div>
+            </li>
+        </ul>
+        <a class="cs-button-solid" href="{{client.onlineBooking}}" target="_blank" rel="noopener">Schedule Now</a>
+    </div>
+</section>
+
+
+    {% include 'components/cta.html' %}
+
+{% endblock %}

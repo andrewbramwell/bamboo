@@ -1,0 +1,18 @@
+{
+    "name": "Amy Thai Massage",
+    "email": "amy.thaimassageservice@gmail.com",
+    "phoneForTel": "+447510000928",
+    "phoneFormatted": "07510 000928",
+    "onlineBooking": "https://amytraditionalthaimassage.setmore.com/",
+    "giftVoucher": "",
+    "address": {
+        "lineOne": "Suite F2",
+        "lineTwo": "Wakefield Business Park",
+        "lineThree": "Denby Dale Road",
+        "city": "Wakefield",
+        "state": "",
+        "zip": "WF2 7AD",
+        "mapLink": "https://maps.app.goo.gl/K2zsaKp1bddCBtXn9"
+    },
+    "domain": "https://amytraditionalthaimassage.co.uk"
+}

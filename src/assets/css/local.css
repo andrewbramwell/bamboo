@@ -1,0 +1,958 @@
+/*-- -------------------------- -->
+<---         Services           -->
+<--- -------------------------- -*/
+/* Mobile - 360px */
+@media only screen and (min-width: 0rem) {
+  #services-1849 {
+    padding: var(--sectionPadding);
+    overflow: hidden;
+    position: relative;
+  }
+  #services-1849 .cs-container {
+    width: 100%;
+    max-width: 44rem;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    /* 48px - 64px */
+    gap: clamp(3rem, 6vw, 4rem);
+    position: relative;
+  }
+  #services-1849 .cs-content {
+    /* set text align to left if content needs to be left aligned */
+    text-align: center;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    /* centers content horizontally, set to flex-start to left align */
+    align-items: center;
+    z-index: 1;
+  }
+  #services-1849 .cs-title {
+    max-width: none;
+  }
+  #services-1849 .cs-ages {
+    font-size: 1rem;
+    line-height: 1.2em;
+    text-align: inherit;
+    font-weight: 700;
+    color: var(--primary);
+  }
+  #services-1849 .cs-card-group {
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    row-gap: 1rem;
+  }
+  #services-1849 .cs-item {
+    list-style: none;
+    width: 100%;
+    /* 264px - 350px, changes to a different clamp on tablet */
+    padding-top: clamp(16.5rem, 75vw, 21.875rem);
+    display: flex;
+    flex-direction: column;
+    grid-column: span 12;
+    position: relative;
+    z-index: 1;
+  }
+  #services-1849 .cs-item:hover {
+    cursor: pointer;
+  }
+  #services-1849 .cs-item:hover .cs-picture img {
+    transform: scale(1.1);
+  }
+  #services-1849 .cs-picture {
+    width: 90vw;
+    max-width: 25.8125rem;
+    height: 90vw;
+    max-height: 25.8125rem;
+    box-sizing: border-box;
+    background-color: #f7f7f7;
+    /* clips img tag from overflowing it on hover */
+    overflow: hidden;
+    border-radius: 50%;
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 50%;
+    z-index: -1;
+    transform: translateX(-50%);
+  }
+  #services-1849 .cs-picture img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    position: absolute;
+    top: 0;
+    left: 0;
+    transition: transform 0.7s;
+  }
+  #services-1849 .cs-text-box {
+    text-align: center;
+    /* 16px - 24px */
+    padding: clamp(1rem, 3.5vw, 1.5rem);
+    background-color: #fff6f6;
+    border-radius: 1.5rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+    z-index: 1;
+    align-self: stretch;
+  }
+  #services-1849 .cs-h3 {
+    font-size: 1.5rem;
+    font-weight: 700;
+    line-height: 120%;
+    width: 100%;
+    margin: 0;
+    color: var(--headerColor);
+  }
+  #services-1849 .cs-item-text {
+    /* 14px - 16px */
+    font-size: clamp(0.875rem, 1.5vw, 1rem);
+    line-height: 1.5em;
+    width: 100%;
+    margin: 0;
+    color: var(--bodyTextColor);
+  }
+}
+/* Tablet - 768px */
+@media only screen and (min-width: 48rem) {
+  #services-1849 .cs-container {
+    max-width: 80rem;
+  }
+  #services-1849 .cs-card-group {
+    /* 16px - 20px */
+    column-gap: clamp(1rem, 2vw, 1.25rem);
+    row-gap: 3rem;
+  }
+  #services-1849 .cs-item {
+    /* 160px - 350px */
+    padding-top: clamp(10rem, 25vw, 21.875rem);
+    grid-column: span 4;
+  }
+  #services-1849 .cs-picture {
+    width: 100%;
+    height: auto;
+    aspect-ratio: 1;
+  }
+  #services-1849 .cs-text-box {
+    height: 100%;
+  }
+}
+/* Large Desktop - 1920px */
+@media only screen and (min-width: 120rem) {
+  #services-1849 .cs-graphic1 {
+    margin-right: 25rem;
+    left: auto;
+    right: 50%;
+  }
+  #services-1849 .cs-graphic2 {
+    margin-left: 26.25rem;
+    right: auto;
+    left: 50%;
+  }
+}
+/* Dark Mode */
+@media only screen and (min-width: 0rem) {
+  body.dark-mode #services-1849 {
+    background-color: rgba(0, 0, 0, 0.2);
+  }
+  body.dark-mode #services-1849:before {
+    display: none;
+  }
+  body.dark-mode #services-1849 .cs-title,
+  body.dark-mode #services-1849 .cs-text,
+  body.dark-mode #services-1849 .cs-item-text,
+  body.dark-mode #services-1849 .cs-h3 {
+    color: var(--bodyTextColorWhite);
+  }
+  body.dark-mode #services-1849 .cs-text,
+  body.dark-mode #services-1849 .cs-item-text {
+    opacity: 0.8;
+  }
+  body.dark-mode #services-1849 .cs-text-box {
+    background-color: var(--dark);
+    position: relative;
+    overflow: hidden;
+    z-index: 1;
+    transition: background-color 0.3s;
+  }
+  body.dark-mode #services-1849 .cs-text-box:before {
+    content: '';
+    width: 100%;
+    height: 100%;
+    background: var(--medium);
+    opacity: 0.6;
+    position: absolute;
+    display: block;
+    top: 0;
+    left: 0;
+    z-index: -1;
+  }
+  body.dark-mode #services-1849 .cs-background {
+    display: none;
+  }
+  body.dark-mode #services-1849 .cs-topper {
+    color: var(--secondary);
+  }
+}
+/*-- -------------------------- -->
+<---    Side By Side Reverse    -->
+<--- -------------------------- -*/
+/* Mobile - 360px */
+@media only screen and (min-width: 0rem) {
+  #sbs-r-870 {
+    padding: var(--sectionPadding);
+    background-color: #fff6f6;
+  }
+  #sbs-r-870 .cs-container {
+    width: 100%;
+    /* changes to 1280px at desktop */
+    max-width: 34.375rem;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    /* 48px - 64px */
+    gap: clamp(3rem, 7vw, 4rem);
+  }
+  #sbs-r-870 .cs-content {
+    /* set text align to left if content needs to be left aligned */
+    text-align: left;
+    width: 100%;
+    max-width: 33.875rem;
+    /* prevents padding from affecting width and height */
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    /* centers content horizontally, set to flex-start to left align */
+    align-items: flex-start;
+  }
+  #sbs-r-870 .cs-title {
+    /* 17 characters wide including spaces */
+    max-width: 17ch;
+  }
+  #sbs-r-870 .cs-text {
+    margin-bottom: 1rem;
+  }
+  #sbs-r-870 .cs-text:last-of-type {
+    margin-bottom: 2rem;
+  }
+  #sbs-r-870 .cs-picture {
+    display: block;
+    position: relative;
+    width: 100%;
+    max-width: 39.375rem;
+    /* 400px - 775px */
+    height: clamp(25rem, 70vw, 48.4375rem);
+    /* 100px - 200px */
+    border-radius: 2em;
+    /* clips img tag corners */
+    overflow: hidden;
+  }
+  #sbs-r-870 .cs-picture img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+  }
+}
+/* Desktop - 1024px */
+@media only screen and (min-width: 64rem) {
+  #sbs-r-870 {
+    padding: var(--sectionPadding);
+  }
+  #sbs-r-870 .cs-container {
+    flex-direction: row;
+    max-width: 80rem;
+    justify-content: space-between;
+  }
+  #sbs-r-870 .cs-content {
+    width: 53%;
+    /* reset the padding, add the section padding back to the section container */
+    padding: 0;
+    /* sends it to the left in the 1st position */
+    order: -1;
+  }
+  #sbs-r-870 .cs-picture {
+    width: 47vw;
+    position: relative;
+  }
+}
+/* Dark Mode */
+@media only screen and (min-width: 0rem) {
+  body.dark-mode #sbs-r-870 {
+    background-color: var(--dark);
+  }
+  body.dark-mode #sbs-r-870 .cs-topper {
+    color: var(--secondary);
+  }
+  body.dark-mode #sbs-r-870 .cs-title,
+  body.dark-mode #sbs-r-870 .cs-text {
+    color: var(--bodyTextColorWhite);
+  }
+  body.dark-mode #sbs-r-870 .cs-text {
+    opacity: 0.8;
+  }
+  body.dark-mode #sbs-r-870 .cs-picture:before {
+    background-color: var(--accent);
+  }
+}
+/*-- -------------------------- -->
+<---          Process           -->
+<--- -------------------------- -*/
+/* Mobile - 360px */
+@media only screen and (min-width: 0rem) {
+  #process-687 {
+    padding: var(--sectionPadding);
+    /* Centers button */
+    text-align: center;
+    background-color: #333333;
+    position: relative;
+    z-index: 1;
+  }
+  #process-687 .cs-container {
+    width: 100%;
+    max-width: 80rem;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    /* 48px - 64px */
+    gap: clamp(3rem, 6vw, 4rem);
+  }
+  #process-687 .cs-content {
+    /* set text align to left if content needs to be left aligned */
+    text-align: center;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    /* centers content horizontally, set to flex-start to left align */
+    align-items: center;
+  }
+  #process-687 .cs-title {
+    color: var(--bodyTextColorWhite);
+  }
+  #process-687 .cs-text {
+    opacity: 0.8;
+    color: var(--bodyTextColorWhite);
+  }
+  #process-687 .cs-topper {
+    color: var(--primary);
+  }
+  #process-687 .cs-card-group {
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    column-gap: 1.25rem;
+    row-gap: 2.5rem;
+  }
+  #process-687 .cs-item {
+    list-style: none;
+    width: 100%;
+    max-width: 25.8125rem;
+  }
+  #process-687 .cs-picture {
+    width: 6.25rem;
+    height: 6.25rem;
+    margin: auto;
+    margin-bottom: 1.5rem;
+    background-color: #fdfaf8;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  #process-687 .cs-icon {
+    width: auto;
+    height: 2.375rem;
+    display: block;
+  }
+  #process-687 .cs-h3 {
+    /* 20px - 25px */
+    font-size: clamp(1.25rem, 3vw, 1.5625rem);
+    font-weight: 700;
+    margin: 0;
+    margin-bottom: 0.75rem;
+    color: #fff;
+  }
+  #process-687 .cs-item-text {
+    font-size: 1rem;
+    line-height: 1.5em;
+    margin: 0;
+    color: var(--bodyTextColorWhite);
+  }
+  #process-687 .cs-background {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    opacity: 0.02;
+    /* Makes img tag act as a background image */
+    object-fit: cover;
+    z-index: -1;
+  }
+}
+/* Tablet - 768px */
+@media only screen and (min-width: 48rem) {
+  #process-687 .cs-card-group {
+    flex-direction: row;
+    justify-content: space-between;
+  }
+}
+/* Dark Mode */
+@media only screen and (min-width: 0rem) {
+  body.dark-mode #process-687 {
+    background-color: #333;
+  }
+  body.dark-mode .cs-topper {
+    color: var(--secondary);
+  }
+}
+/*-- -------------------------- -->
+<---       Side By Side         -->
+<--- -------------------------- -*/
+/* Mobile - 360px */
+@media only screen and (min-width: 0rem) {
+  #sbs-867 {
+    padding: var(--sectionPadding);
+    background-color: #fff6f6;
+  }
+  #sbs-867 .cs-container {
+    width: 100%;
+    /* changes to 1280px at desktop */
+    max-width: 34.375rem;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    /* 48px - 64px */
+    gap: clamp(3rem, 7vw, 4rem);
+  }
+  #sbs-867 .cs-content {
+    /* set text aling to left if content needs to be left aligned */
+    text-align: left;
+    width: 100%;
+    max-width: 33.875rem;
+    /* prevents padding from affecting width and height */
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    /* centers content horizontally, set to flex-start to left align */
+    align-items: flex-start;
+  }
+  #sbs-867 .cs-title {
+    /* 17 characters wide including spaces */
+    max-width: 17ch;
+  }
+  #sbs-867 .cs-text {
+    margin-bottom: 1rem;
+  }
+  #sbs-867 .cs-text:last-of-type {
+    margin-bottom: 2rem;
+  }
+  #sbs-867 .cs-picture {
+    display: block;
+    position: relative;
+    width: 100%;
+    max-width: 39.375rem;
+    /* 400px - 775px */
+    height: clamp(25rem, 70vw, 48.4375rem);
+    border-radius: 2em;
+    overflow: hidden;
+  }
+  #sbs-867 .cs-picture img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+  }
+}
+/* Tablet - 768px */
+@media only screen and (min-width: 64rem) {
+  #sbs-867 {
+    padding: var(--sectionPadding);
+  }
+  #sbs-867 .cs-container {
+    flex-direction: row;
+    max-width: 80rem;
+    justify-content: space-between;
+  }
+  #sbs-867 .cs-content {
+    width: 53%;
+    /* reset the padding, add the section padding back to the section container */
+    padding: 0;
+  }
+  #sbs-867 .cs-picture {
+    width: 47vw;
+    position: relative;
+  }
+}
+/* Dark Mode */
+@media only screen and (min-width: 0rem) {
+  body.dark-mode #sbs-867 {
+    background-color: var(--dark);
+  }
+  body.dark-mode #sbs-867 .cs-topper {
+    color: var(--secondary);
+  }
+  body.dark-mode #sbs-867 .cs-title,
+  body.dark-mode #sbs-867 .cs-text {
+    color: var(--bodyTextColorWhite);
+  }
+  body.dark-mode #sbs-867 .cs-text {
+    opacity: 0.8;
+  }
+  body.dark-mode #sbs-867 .cs-picture:before {
+    background-color: var(--accent);
+  }
+}
+/*-- -------------------------- -->
+<---            FAQ             -->
+<--- -------------------------- -*/
+/* Mobile - 360px */
+@media only screen and (min-width: 0rem) {
+  #faq-1505 {
+    padding: var(--sectionPadding);
+    position: relative;
+    overflow: hidden;
+    background-color: #fff;
+    z-index: 1;
+  }
+  #faq-1505 .cs-container {
+    width: 100%;
+    /* changes to 1280px at desktop */
+    max-width: 36.5rem;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    /* 32px - 48px */
+    gap: clamp(2rem, 6vw, 3rem);
+  }
+  #faq-1505 .cs-content {
+    /* set text align to left if content needs to be left aligned */
+    text-align: center;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    /* centers content horizontally, set to flex-start to left align */
+    align-items: center;
+  }
+  #faq-1505 .cs-title {
+    /* 32px - 48px */
+    margin: 0 0 clamp(2rem, 5vw, 3rem);
+  }
+  #faq-1505 .cs-card-group {
+    margin: 0;
+    padding: 0;
+    display: grid;
+    /* changed at desktop */
+    grid-template-columns: repeat(auto-fit, minmax(17rem, 1fr));
+    /* 16px - 20px */
+    gap: clamp(1rem, 1.7vw, 1.25rem);
+  }
+  #faq-1505 .cs-item {
+    text-align: left;
+    list-style: none;
+    margin: 0;
+    padding: 2rem;
+    background-color: #fff;
+    border: 1px solid #E8E8E8;
+    border-radius: 2rem;
+  }
+  #faq-1505 .cs-number {
+    font-size: 3.0625rem;
+    line-height: 1.2em;
+    font-weight: 900;
+    color: var(--primary);
+    /* 8px - 72px */
+    margin: 0 0 clamp(0.5rem, 6vw, 4.5rem);
+    display: block;
+  }
+  #faq-1505 .cs-item-text {
+    font-size: 1rem;
+    line-height: 1.5em;
+    color: var(--bodyTextColor);
+    margin: 0;
+  }
+  #faq-1505 .cs-image-group {
+    position: relative;
+    overflow: hidden;
+    border-radius: 1.25rem;
+    z-index: 1;
+  }
+  #faq-1505 .cs-picture {
+    width: 100%;
+    /* 240px - 376px */
+    height: clamp(15rem, 46vw, 23.5rem);
+    display: block;
+    position: relative;
+    border-radius: 50px;
+  }
+  #faq-1505 .cs-picture img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+  #faq-1505 .cs-faq-group {
+    width: 100%;
+    max-width: 40.625rem;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 0.75rem;
+  }
+  #faq-1505 .cs-faq-item {
+    list-style: none;
+    width: 100%;
+    background-color: #fff;
+    border: 1px solid #E8E8E8;
+    /* 24px - 32px */
+    border-radius: clamp(1rem, 2.4vw, 2rem);
+    /* clips all corners of the button that overlap the rounded border */
+    overflow: hidden;
+    transition: border-color 0.3s;
+  }
+  #faq-1505 .cs-faq-item.active {
+    border-color: var(--primary);
+  }
+  #faq-1505 .cs-faq-item.active .cs-button {
+    color: var(--primary);
+  }
+  #faq-1505 .cs-faq-item.active .cs-button .cs-indicator:before {
+    transform: translate(-50%, -50%) rotate(360deg);
+  }
+  #faq-1505 .cs-faq-item.active .cs-button .cs-indicator:after {
+    transform: translate(-50%, -50%) rotate(0deg);
+  }
+  #faq-1505 .cs-faq-item.active .cs-item-p {
+    height: auto;
+    /* 20px - 24px bottom */
+    /* 16px - 24px left & right */
+    padding: 0 clamp(1rem, 2vw, 1.5rem) clamp(1.25rem, 1.3vw, 1.5rem);
+    opacity: 1;
+  }
+  #faq-1505 .cs-button {
+    font-size: 1.25rem;
+    line-height: 1.2em;
+    text-align: left;
+    font-weight: bold;
+    /* 16px - 24px */
+    padding: clamp(1rem, 2vw, 1.5rem);
+    background-color: #fff;
+    border: none;
+    color: var(--headerColor);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    position: relative;
+    transform-style: preserve-3d;
+    perspective: 700px;
+    transition: background-color 0.3s, color 0.3s;
+  }
+  #faq-1505 .cs-button:hover {
+    cursor: pointer;
+  }
+  #faq-1505 .cs-button .cs-indicator {
+    /* 40px - 48px */
+    width: clamp(2.5rem, 4vw, 3rem);
+    height: clamp(2.5rem, 4vw, 3rem);
+    background-color: #fff;
+    border: 1px solid #BABABA;
+    border-radius: 50%;
+    position: relative;
+    z-index: 1;
+  }
+  #faq-1505 .cs-button .cs-indicator:before {
+    /* left line */
+    content: '';
+    width: 1rem;
+    height: 0.125rem;
+    background-color: #767676;
+    opacity: 1;
+    border-radius: 2px;
+    position: absolute;
+    display: block;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    transition: transform 0.5s;
+  }
+  #faq-1505 .cs-button .cs-indicator:after {
+    /* right line */
+    content: '';
+    width: 1rem;
+    height: 0.125rem;
+    background-color: #767676;
+    opacity: 1;
+    border-radius: 2px;
+    position: absolute;
+    display: block;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) rotate(90deg);
+    transition: transform 0.5s;
+  }
+  #faq-1505 .cs-button-text {
+    width: 80%;
+    display: block;
+  }
+  #faq-1505 .cs-item-p {
+    /* 14px - 16px */
+    font-size: clamp(0.875rem, 1.5vw, 1rem);
+    line-height: 1.5em;
+    width: 90%;
+    height: 0;
+    margin: 0;
+    /* 16px - 24px */
+    padding: 0 clamp(1rem, 2vw, 1.5rem);
+    opacity: 0;
+    color: var(--bodyTextColor);
+    /* clips the text so it doesn't show up */
+    overflow: hidden;
+    transition: opacity 0.3s, padding-bottom 0.3s;
+  }
+  #faq-1505 .cs-top {
+    width: 100%;
+    min-width: 120rem;
+    height: auto;
+    display: block;
+    position: absolute;
+    left: 0;
+    top: 0;
+  }
+  #faq-1505 .cs-bottom {
+    width: 100%;
+    min-width: 120rem;
+    height: auto;
+    display: block;
+    position: absolute;
+    left: 0;
+    bottom: 0;
+  }
+}
+/* Desktop - 1024px */
+@media only screen and (min-width: 64rem) {
+  #faq-1505 .cs-container {
+    max-width: 80rem;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: stretch;
+  }
+  #faq-1505 .cs-content {
+    max-height: 38.5rem;
+    width: 40%;
+    text-align: left;
+    align-items: flex-start;
+    /* prevents flexbox from squishing it */
+    flex: none;
+    /* sends it to the right in the 2nd position */
+    order: 2;
+  }
+  #faq-1505 .cs-card-group {
+    /* pushes up against the other flex items so it pushes to the bottom of the flexbox */
+    margin-top: auto;
+    grid-template-columns: 1fr 1fr;
+  }
+  #faq-1505 .cs-item {
+    grid-column: span 1;
+  }
+}
+/* Larger Desktop - 1600px */
+@media only screen and (min-width: 100rem) {
+  #faq-1505 .cs-floater {
+    display: block;
+  }
+}
+/* Dark Mode */
+@media only screen and (min-width: 0rem) {
+  body.dark-mode #faq-1505 {
+    background-color: #121212;
+  }
+  body.dark-mode #faq-1505 .cs-title,
+  body.dark-mode #faq-1505 .cs-item-p {
+    color: var(--bodyTextColorWhite);
+  }
+  body.dark-mode #faq-1505 .cs-item {
+    background-color: rgba(0, 0, 0, 0.2);
+    border-color: rgba(255, 255, 255, 0.2);
+  }
+  body.dark-mode #faq-1505 .cs-number {
+    color: var(--secondary);
+  }
+  body.dark-mode #faq-1505 .cs-topper {
+    color: var(--secondary);
+  }
+  body.dark-mode #faq-1505 .cs-item-text {
+    color: var(--bodyTextColorWhite);
+    opacity: 0.8;
+  }
+  body.dark-mode #faq-1505 .cs-faq-item {
+    background-color: rgba(255, 255, 255, 0.1);
+    border-color: rgba(255, 255, 255, 0.2);
+  }
+  body.dark-mode #faq-1505 .cs-faq-item.active .cs-button:before,
+  body.dark-mode #faq-1505 .cs-faq-item.active .cs-button:after {
+    background-color: var(--bodyTextColorWhite);
+  }
+  body.dark-mode #faq-1505 .cs-button {
+    background-color: transparent;
+    color: var(--bodyTextColorWhite);
+  }
+  body.dark-mode #faq-1505 .cs-button:before,
+  body.dark-mode #faq-1505 .cs-button:after {
+    background-color: var(--bodyTextColorWhite);
+  }
+  body.dark-mode #faq-1505 .cs-indicator {
+    background-color: rgba(0, 0, 0, 0.2);
+    border-color: rgba(255, 255, 255, 0.2);
+  }
+  body.dark-mode #faq-1505 .cs-indicator:before,
+  body.dark-mode #faq-1505 .cs-indicator:after {
+    background-color: var(--bodyTextColorWhite);
+  }
+  body.dark-mode #faq-1505 .cs-top path,
+  body.dark-mode #faq-1505 .cs-bottom path {
+    fill: var(--dark);
+  }
+}
+/*-- -------------------------- -->
+<---          Reviews           -->
+<--- -------------------------- -*/
+/* Mobile - 360px */
+@media only screen and (min-width: 0rem) {
+  #reviews-354 {
+    padding: var(--sectionPadding);
+    padding-top: 0;
+  }
+  #reviews-354 .cs-container {
+    width: 100%;
+    max-width: 80rem;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    /* 48px - 64px */
+    gap: clamp(3rem, 6vw, 4rem);
+  }
+  #reviews-354 .cs-content {
+    /* set text align to left if content needs to be left aligned */
+    text-align: center;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    /* centers content horizontally, set to flex-start to left align */
+    align-items: center;
+  }
+  #reviews-354 .cs-card-group {
+    padding: 0;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    /* 16px - 20px */
+    gap: clamp(1rem, 2.5vw, 1.15rem);
+  }
+  #reviews-354 .cs-item {
+    list-style: none;
+    width: 100%;
+    max-width: 39.375rem;
+    /* 24px - 32px top & bottom */
+    /* 16px - 40px left & right */
+    padding: clamp(1.5rem, 3.15vw, 2rem) clamp(1rem, 3.15vw, 2.5rem);
+    background-color: #f7f7f7;
+    border-radius: 1rem;
+    /* prevents padding from adding to height and width */
+    box-sizing: border-box;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    flex-direction: column;
+    position: relative;
+  }
+  #reviews-354 .cs-quote {
+    width: 2.5rem;
+    height: auto;
+    margin-bottom: 2rem;
+    display: block;
+  }
+  #reviews-354 .cs-review {
+    /* 14px - 20px */
+    font-size: clamp(0.875rem, 2vw, 1.25rem);
+    line-height: 1.5em;
+    margin: 0;
+    /* 20px - 40px */
+    margin-bottom: clamp(1.25rem, 3vw, 2.5rem);
+    color: var(--bodyTextColor);
+  }
+  #reviews-354 .cs-name {
+    /* 20px - 25px */
+    font-size: clamp(1.25rem, 3vw, 1.5625rem);
+    line-height: 1.2em;
+    font-weight: 700;
+    margin: 0;
+    /* in case one card has more text than the other, this pushes up against the review text so the name and title are always at the bottom. Only works if parent is a flexbox */
+    margin-top: auto;
+    color: var(--headerColor);
+    display: block;
+  }
+  #reviews-354 .cs-job {
+    /* 14px - 16px */
+    font-size: clamp(0.875rem, 1.6vw, 1rem);
+    line-height: 1.5em;
+    margin: 0;
+    color: var(--bodyTextColor);
+    display: block;
+  }
+}
+/* Tablet - 768px */
+@media only screen and (min-width: 48rem) {
+  #reviews-354 .cs-card-group {
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: stretch;
+  }
+}
+/* Dark Mode */
+@media only screen and (min-width: 0rem) {
+  body.dark-mode #reviews-354 .cs-topper {
+    color: var(--primaryLight);
+  }
+  body.dark-mode #reviews-354 .cs-title,
+  body.dark-mode #reviews-354 .cs-text {
+    color: var(--bodyTextColorWhite);
+  }
+  body.dark-mode #reviews-354 .cs-item {
+    background-color: var(--accent);
+  }
+  body.dark-mode #reviews-354 .cs-review,
+  body.dark-mode #reviews-354 .cs-name {
+    color: var(--bodyTextColorWhite);
+  }
+  body.dark-mode #reviews-354 .cs-topper {
+    color: var(--secondary);
+  }
+  body.dark-mode #reviews-354 .cs-job {
+    color: var(--bodyTextColorWhite);
+    opacity: 0.7;
+  }
+}
