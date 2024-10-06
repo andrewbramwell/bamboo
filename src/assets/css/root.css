@@ -4,9 +4,9 @@
 /* CodeStitch Root and Helpers */
 @media only screen and (min-width: 0em) {
   :root {
-    --primary: #ec839e;
-    --primaryLight: #fbdae0;
-    --secondary: #cda46d;
+    --primary: #6C9548;
+    --primaryLight: #C39C6F;
+    --secondary: #C39C6F;
     --secondaryLight: #001f3f;
     --headerColor: #1a1a1a;
     --bodyTextColor: #4e4b66;
@@ -54,21 +54,21 @@
     line-height: clamp(2.875rem, 5.5vw, 3.5rem);
     text-decoration: none;
     font-weight: 700;
-    overflow: hidden;
+    text-align: center;
     margin: 0;
     color: #fff;
     padding: 0 3rem;
-    border-radius: 1.875rem;
     background-color: var(--primary);
+    border-radius: 0.25rem;
     display: inline-block;
     position: relative;
     z-index: 1;
-    transition: color 0.3s;
+    /* prevents padding from adding to the width */
+    box-sizing: border-box;
   }
   .cs-button-solid:before {
-    content: '';
+    content: "";
     position: absolute;
-    display: block;
     height: 100%;
     width: 0%;
     background: var(--secondary);
@@ -76,6 +76,7 @@
     top: 0;
     left: 0;
     z-index: -1;
+    border-radius: 0.25rem;
     transition: width 0.3s;
   }
   .cs-button-solid:hover:before {
@@ -134,44 +135,24 @@
     src: url('/assets/fonts/syne-v22-latin-700.woff2') format('woff2');
     /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
   }
-  /* merienda-regular - latin */
+  /* gayathri-regular - latin */
   @font-face {
     font-display: swap;
     /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
-    font-family: 'Merienda';
+    font-family: 'Gayathri';
     font-style: normal;
     font-weight: 400;
-    src: url('/assets/fonts/merienda-v19-latin-regular.woff2') format('woff2');
+    src: url('/assets/fonts/gayathri-v17-latin-regular.woff2') format('woff2');
     /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
   }
-  /* merienda-700 - latin */
+  /* gayathri-700 - latin */
   @font-face {
     font-display: swap;
     /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
-    font-family: 'Merienda';
+    font-family: 'Gayathri';
     font-style: normal;
     font-weight: 700;
-    src: url('/assets/fonts/merienda-v19-latin-700.woff2') format('woff2');
-    /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
-  }
-  /* aclonica-regular - latin */
-  @font-face {
-    font-display: swap;
-    /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
-    font-family: 'Aclonica';
-    font-style: normal;
-    font-weight: 400;
-    src: url('/assets/fonts/aclonica-v22-latin-regular.woff2') format('woff2');
-    /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
-  }
-  /* arizonia-regular - latin */
-  @font-face {
-    font-display: swap;
-    /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
-    font-family: 'Arizonia';
-    font-style: normal;
-    font-weight: 400;
-    src: url('/assets/fonts/arizonia-v21-latin-regular.woff2') format('woff2');
+    src: url('/assets/fonts/gayathri-v17-latin-700.woff2') format('woff2');
     /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
   }
   body,
@@ -206,7 +187,7 @@
   h6 {
     margin: 0;
     color: var(--headerColor);
-    font-family: "arizonia", Arial, serif;
+    font-family: "Syne", Arial, serif;
   }
   p,
   li,
@@ -603,8 +584,12 @@
   body.dark-mode #cs-navigation:before {
     background-color: var(--dark);
   }
+  body.dark-mode #cs-navigation .cs-logo {
+    /* turns it white */
+    filter: grayscale(1) brightness(1000%);
+  }
   body.dark-mode #cs-navigation .cs-toggle {
-    background-color: var(--secondary);
+    background-color: var(--primary);
   }
   body.dark-mode #cs-navigation .cs-phone {
     color: var(--bodyTextColorWhite);
@@ -855,7 +840,7 @@
   }
   #cs-navigation .cs-logo img {
     width: auto;
-    height: 100%;
+    height: 200%;
     /* ensures the image never overflows the container. It stays contained within it's width and height and expands to fill it then stops once it reaches an edge */
     object-fit: contain;
   }
@@ -1012,6 +997,10 @@
   body.dark-mode #cs-navigation {
     background-color: var(--dark);
   }
+  body.dark-mode #cs-navigation .cs-logo {
+    /* turns it white */
+    filter: grayscale(1) brightness(1000%);
+  }
   body.dark-mode #cs-navigation .cs-li-link,
   body.dark-mode #cs-navigation .cs-phone {
     color: var(--bodyTextColorWhite);
@@ -1063,7 +1052,7 @@
     margin: 0;
     color: #1a1a1a;
     position: relative;
-    font-family: arizonia;
+    font-family: Syne;
   }
   #banner-1519 .cs-breadcrumbs {
     display: flex;
@@ -1116,7 +1105,7 @@
     content: '';
     width: 100%;
     height: 100%;
-    background: #fcf6fe;
+    background: #F4F7F6;
     opacity: 0.8;
     position: absolute;
     display: block;
@@ -1149,7 +1138,7 @@
   #banner-1519 .cs-background:before {
     width: 100%;
     height: 100%;
-    background: linear-gradient(89deg, rgba(255, 234, 242, 0.875) 44.46%, rgba(255, 243, 236, 0) 78.47%);
+    background: linear-gradient(89deg, #eff1f0 20%, rgba(255, 243, 236, 0) 78.47%);
     opacity: 1;
   }
 }
@@ -1291,7 +1280,7 @@
   #cs-footer-710 {
     padding: var(--sectionPadding);
     padding-bottom: 3.125rem;
-    background-color: #333;
+    background-color: #594B42;
     position: relative;
     z-index: 1;
   }
@@ -1360,7 +1349,7 @@
     margin: 0 0 1.5rem 0;
     color: #fff;
     display: block;
-    font-family: arizonia;
+    font-family: Syne;
   }
   #cs-footer-710 .cs-link {
     /* 14px - 16px */
@@ -1472,7 +1461,7 @@
     transition: background-color 0.3s;
   }
   #cs-footer-710 .cs-social-link:hover {
-    background-color: #f6e5db;
+    background-color: var(--primary);
   }
   #cs-footer-710 .cs-social-link:hover .cs-default {
     display: none;
@@ -1509,12 +1498,10 @@
     display: block;
   }
   #cs-footer-710 .cs-copyright-link {
-    font-size: 1.5em;
     line-height: inherit;
     text-decoration: none;
-    font-family: arizonia;
     margin: 0;
-    color: inherit;
+    color: var(--primary);
     display: inline-block;
   }
   #cs-footer-710 .cs-copyright-link:hover {

@@ -1,0 +1,88 @@
+---
+title: 'Thai Massage'
+description: 'Experience authentic Thai Massage in Beeston. Our traditional techniques improve flexibility, reduce tension, and boost energy. Tailored to your needs.'
+preloadImg: '/assets/images/banners/banner3.webp'
+permalink: 'thai-massage/'
+eleventyNavigation:
+
+---
+
+{% extends "layouts/base.html" %}
+
+{% block head %}
+    <link rel="stylesheet" href="/assets/css/internal.css">
+{% endblock %}
+
+{% block body %}
+
+<!-- ============================================ -->
+<!--                   Banner                     -->
+<!-- ============================================ -->
+
+<div id="banner-1519">
+    <div class="cs-container">
+        <span class="cs-int-title">Thai Massage</span>
+        <div class="cs-breadcrumbs">
+            <a href="/" class="cs-link">Home</a>
+            <a href="/thai-massage/" class="cs-link cs-active">Thai Massage</a>
+        </div>
+    </div>
+    <!--Background Image-->
+    <picture class="cs-background">
+        <!--Mobile Image-->
+        <source media="(max-width: 600px)" srcset="/assets/images/banners/banner3-m.webp">
+        <!--Tablet and above Image-->
+        <source media="(min-width: 601px)" srcset="/assets/images/banners/banner3.webp">
+        <img decoding="async" src="/assets/images/banners/banner3.webp" alt="massage oils" width="1280" height="568" aria-hidden="true">
+    </picture>
+    <svg class="cs-mask" xmlns="http://www.w3.org/2000/svg" width="1920" height="136" viewBox="0 0 1920 136" fill="none">
+        <path fill-rule="evenodd" clip-rule="evenodd" d="M1920 136V0C1803.21 45.3334 1445.52 136 951 136C456.485 136 111.116 45.3334 0 0V136H951H1920Z" fill="var(--maskBG)"/>
+    </svg>
+</div>
+
+<!-- ============================================ -->
+<!--                 Content Page                 -->
+<!-- ============================================ -->
+
+<section id="content-page-1399">
+    <div class="cs-container">
+        <div class="cs-image-group">
+            <div class="cs-flex">
+                <picture class="cs-background">
+                    <!--Mobile Image-->
+                    <source media="(max-width: 600px)" srcset="/assets/images/side/thai-m.webp">
+                    <!--Tablet and above Image-->
+                    <source media="(min-width: 601px)" srcset="/assets/images/side/thai-m.webp">
+                    <img loading="lazy" decoding="async" src="/assets/images/side/thai.jpg" alt="thai massage" width="542" height="728">
+                </picture>
+            </div>
+        </div>
+        <div class="cs-content">
+            <h1 class="cs-title">Experience <span class="cs-color">Thai Massage</span> in Beeston, Nottingham</h1>
+            <p>Welcome to Bamboo Thai Massage in Beeston, Nottingham! Immerse yourself in the ancient healing art of Thai Massage, a unique and invigorating technique that combines acupressure, Indian Ayurvedic principles, and assisted yoga postures.</p>
+            <p>During your Thai Massage session, our expert therapist performs the massage on a padded mat on the floor, using not just hands, but also knees, legs, and feet to move you into a series of yoga-like stretches. This full-body treatment doesn't use oils or lotions, allowing for fluid movement and deep, rhythmic compressions.</p>
+            <p>Thai Massage is celebrated for its ability to improve flexibility, reduce muscle tension and spasms, and enhance overall physical and mental well-being. Whether you're seeking relief from pain, headaches, back issues, or simply want to boost your energy and flexibility, our authentic Thai Massage offers a tailored experience to meet your needs.</p>
+            <h3>Discover the Bamboo Thai Massage Difference</h3>
+            <ul>
+                <li>
+                    <strong>Authentic Thai Techniques:</strong> Experience genuine Thai Massage methods brought directly from Thailand by our skilled therapist, Jan.
+                </li>
+                <li>
+                    <strong>Enhanced Flexibility:</strong> Benefit from the unique combination of stretching and compression techniques that help improve your range of motion and flexibility.
+                </li>
+                <li>
+                    <strong>Energy Boost:</strong> Thai Massage works on the body's energy lines, promoting balance and boosting your overall energy levels.
+                </li>
+                <li>
+                    <strong>Customised Treatment:</strong> Our experienced therapist tailors each session to your specific needs and comfort level, ensuring a therapeutic experience that's both effective and enjoyable.
+                </li>
+                <li>
+                    <strong>Holistic Wellness:</strong> Beyond physical benefits, Thai Massage can help reduce stress, improve circulation, and promote a sense of overall well-being.
+                </li>
+            </ul>
+        </div>
+</section>
+
+{% include 'components/cta.html' %}
+
+{% endblock %}

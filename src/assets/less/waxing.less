@@ -4,21 +4,19 @@
 
 /* Mobile - 360px */
 @media only screen and (min-width: 0rem) {
-    #services-1849 {
+    #services-877 {
         padding: var(--sectionPadding);
-        overflow: hidden;
-        position: relative;
 
         .cs-container {
             width: 100%;
-            max-width: (704/16rem);
+            /* changes to 1280px at Tablet */
+            max-width: (784/16rem);
             margin: auto;
             display: flex;
             flex-direction: column;
             align-items: center;
             /* 48px - 64px */
             gap: clamp(3rem, 6vw, 4rem);
-            position: relative;
         }
 
         .cs-content {
@@ -29,213 +27,168 @@
             flex-direction: column;
             /* centers content horizontally, set to flex-start to left align */
             align-items: center;
-            z-index: 1;
         }
 
         .cs-title {
-            max-width: none;
+            /* max width of 22 characters, includes spaces between words */
+            max-width: 39ch;
         }
 
-        .cs-ages {
-            font-size: (16/16rem);
-            line-height: 1.2em;
-            text-align: inherit;
-            font-weight: 700;
-            color: var(--primary);
+        .cs-text {
+            max-width: (1064/16rem);
         }
 
         .cs-card-group {
             width: 100%;
-            margin: 0;
             padding: 0;
+            margin: 0;
             display: grid;
-            grid-template-columns: repeat(12, 1fr);
-            row-gap: (16/16rem);
+            grid-template-columns: repeat(3, 1fr);
+            gap: (20/16rem);
         }
 
         .cs-item {
+            text-align: center;
             list-style: none;
             width: 100%;
-            /* 264px - 350px, changes to a different clamp on tablet */
-            padding-top: clamp(16.5rem, 75vw, 21.875rem);
-            display: flex;
-            flex-direction: column;
-            grid-column: span 12;
+            max-width: (500/16rem);
+            border-radius: (16/16rem);
+            background-color: #fff;
+            overflow: hidden;
+            grid-column: span 3;
             position: relative;
             z-index: 1;
+            transition:
+                box-shadow 0.3s,
+                transform 0.3s;
 
             &:hover {
-                cursor: pointer;
+                box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+                
                 .cs-picture {
-
                     img {
+                        opacity: 0.3;
                         transform: scale(1.1);
                     }
                 }
+                .cs-h3 {
+                    color: var(--primaryLight);
+                }
             }
+
+            &:before {
+                /* border, done in pseudo so it can sit under the picture */
+                content: "";
+                width: 100%;
+                height: 100%;
+                border-radius: (16/16rem);
+                border: 1px solid #e8e8e8;
+                /* prevents border from affecting height and width */
+                box-sizing: border-box;
+                background: transparent;
+                opacity: 1;
+                position: absolute;
+                display: block;
+                top: 0;
+                left: 0;
+                z-index: -1;
+            }
+        }
+
+        .cs-link {
+            text-decoration: none;
+            padding: 0 0 (20/16rem) 0;
+            display: block;
         }
 
         .cs-picture {
-            width: 90vw;
-            max-width: (413/16rem);
-            height: 90vw;
-            max-height: (413/16rem);
-            box-sizing: border-box;
-            background-color: #f7f7f7;
-            /* clips img tag from overflowing it on hover */
+            width: 100%;
+            height: (200/16rem);
+            margin-bottom: (20/16rem);
+            background-color: var(--primary);
+            /* clips the img tag corners */
             overflow: hidden;
-
-            border-radius: 50%;
             display: block;
-            position: absolute;
-            top: 0;
-            left: 50%;
-            z-index: -1;
-            transform: translateX(-50%);
+            position: relative;
+            z-index: 10;
 
             img {
-                width: 100%;
-                height: 100%;
-                object-fit: cover;
                 position: absolute;
                 top: 0;
                 left: 0;
-                transition: transform 0.7s;
+                height: 100%;
+                width: 100%;
+                object-fit: cover;
+                transition:
+                    transform 0.6s,
+                    opacity 0.3s;
             }
         }
 
-        .cs-text-box {
-            text-align: center;
-            /* 16px - 24px */
-            padding: clamp(1rem, 3.5vw, 1.5rem);
-            background-color: #fff6f6;
-            border-radius: (24/16rem);
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            gap: (16/16rem);
-            z-index: 1;
-            align-self: stretch;
-        }
-
         .cs-h3 {
-            font-size: (30/20rem);
+            font-size: (20/16rem);
+            text-align: inherit;
+            line-height: 1.2em;
             font-weight: 700;
-            line-height: 120%;
-            width: 100%;
-            margin: 0;
             color: var(--headerColor);
+            margin: 0 0 (12/16rem) 0;
+            /* 16px - 24px */
+            padding: 0 clamp(1rem, 2vw, 1.5rem);
+            transition: color 0.3s;
         }
 
         .cs-item-text {
-            /* 14px - 16px */
+            /* 14px - 16px  */
             font-size: clamp(0.875rem, 1.5vw, 1rem);
+            text-align: inherit;
             line-height: 1.5em;
-            width: 100%;
-            margin: 0;
             color: var(--bodyTextColor);
+            margin: 0;
+            padding: 0 (20/16rem);
         }
-
     }
 }
 
 /* Tablet - 768px */
 @media only screen and (min-width: 48rem) {
-    #services-1849 {
-
+    #services-877 {
         .cs-container {
             max-width: (1280/16rem);
         }
-
-        .cs-card-group {
-            /* 16px - 20px */
-            column-gap: clamp(1rem, 2vw, 1.25rem);
-            row-gap: (48/16rem);
-        }
-
         .cs-item {
-            /* 160px - 350px */
-            padding-top: clamp(10rem, 25vw, 21.875rem);
-            grid-column: span 4;
-        }
-
-        .cs-picture {
-            width: 100%;
-            height: auto;
-            aspect-ratio: 1;
-        }
-
-        .cs-text-box {
-            height: 100%;
+            grid-column: span 1;
+            max-width: (462/16rem);
         }
     }
 }
-    
-/* Large Desktop - 1920px */
-@media only screen and (min-width: 120rem) {
-    #services-1849 {
-        .cs-graphic1 {
-            margin-right: (400/16rem);
-            left: auto;
-            right: 50%;
-        }
 
-        .cs-graphic2 {
-            margin-left: (420/16rem);
-            right: auto;
-            left: 50%;
-        }
-    }
-}
-    
 /* Dark Mode */
 @media only screen and (min-width: 0rem) {
     body.dark-mode {
-        #services-1849 {
-            background-color: rgba(0, 0, 0, .2);
-
-            &:before {
-                display: none;
+        #services-877 {
+            .cs-topper {
+                color: var(--primaryLight);
             }
 
-            .cs-title, .cs-text, .cs-item-text, .cs-h3 {
+            .cs-title,
+            .cs-text,
+            .cs-h3,
+            .cs-item-text {
                 color: var(--bodyTextColorWhite);
             }
 
-            .cs-text, .cs-item-text {
-                opacity: .8;
+            .cs-text,
+            .cs-item-text {
+                opacity: 0.8;
             }
 
-            .cs-text-box {
-                background-color: var(--dark);
-                position: relative;
-                overflow: hidden;
-                z-index: 1;
-                transition: background-color .3s;
-
+            .cs-item {
+                background-color: var(--medium);
                 &:before {
-                    content: '';
-                    width: 100%;
-                    height: 100%;
-                    background: var(--medium);
-                    opacity: .6;
-                    position: absolute;
-                    display: block;
-                    top: 0;
-                    left: 0;
-                    z-index: -1;
+                    opacity: 0.3;
                 }
-            }
-
-            .cs-background {
-                display: none;
-            }
-
-            .cs-topper {
-                color: var(--secondary);
             }
         }
     }
 }
-
 

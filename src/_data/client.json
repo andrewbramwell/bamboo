@@ -1,18 +1,18 @@
 {
-    "name": "Amy Thai Massage",
-    "email": "amy.thaimassageservice@gmail.com",
-    "phoneForTel": "+447510000928",
-    "phoneFormatted": "07510 000928",
-    "onlineBooking": "https://amytraditionalthaimassage.setmore.com/",
+    "name": "Bamboo Thai Massage",
+    "email": "bamboothai88@gmail.com",
+    "phoneForTel": "+447721469877",
+    "phoneFormatted": "07721 469877",
+    "onlineBooking": "https://bamboothai.setmore.com/",
     "giftVoucher": "",
     "address": {
-        "lineOne": "Suite F2",
-        "lineTwo": "Wakefield Business Park",
-        "lineThree": "Denby Dale Road",
-        "city": "Wakefield",
+        "lineOne": "23 Chilwell Rd",
+        "lineTwo": "Beeston",
+        "lineThree": "",
+        "city": "Nottingham ",
         "state": "",
-        "zip": "WF2 7AD",
-        "mapLink": "https://maps.app.goo.gl/K2zsaKp1bddCBtXn9"
+        "zip": "NG9 1EH",
+        "mapLink": "https://maps.app.goo.gl/RbYRg3ZfJQZmDZVP8"
     },
-    "domain": "https://amytraditionalthaimassage.co.uk"
+    "domain": "http://www.bamboothaimassage.co.uk"
 }
